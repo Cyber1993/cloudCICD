@@ -56,6 +56,8 @@ pipeline {
 	stage('Grafana') {
             steps {
 		sh 'cd /var/lib/jenkins/workspace/site/grafana/'
+		sh 'pwd'
+		sh 'ls -l'
                 sh 'bash run.sh'
             }
         }
