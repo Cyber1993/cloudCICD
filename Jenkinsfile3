@@ -58,7 +58,7 @@ pipeline {
 		sh 'cd /var/lib/jenkins/workspace/site/grafana/'
 		sh 'pwd'
 		sh 'ls -l'
-                sh 'bash run.sh'
+                sh 'bash /var/lib/jenkins/workspace/site/grafana/run.sh'
             }
         }
     }
