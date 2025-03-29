@@ -1,0 +1,13 @@
+receivers:
+  - name: 'telegram'
+    telegram_configs:
+      - bot_token: "7918796551:AAEMvbX77Qm2StDJ55QS8TAlT3-KSnbWolE"
+        chat_id: 370901112  # Правильний chat_id
+        send_resolved: true  # Відправляти повідомлення про розв'язання алерту (за бажанням)
+
+route:
+  receiver: 'telegram'
+  routes:
+    - receiver: 'telegram'
+      matchers:
+        - severity=~"warning|critical|firing"
